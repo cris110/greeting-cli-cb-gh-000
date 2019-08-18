@@ -21,7 +21,7 @@ describe './lib/greeting.rb' do
     end
 
     it 'greets the person with additional whitespace removed' do
-      allow($stdout).to receive(:puts)
+      allow($stdout).to receive(:puts.strip)
 
       output = capture_puts{ greeting(" Sally\t   ") }
 
